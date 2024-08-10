@@ -155,6 +155,62 @@ public class DLL {
         length--;
         return temp;
     }
+    //    Swap first and Last Node
+    public void swap() {
+//        if length is 0
+//        if (length == 0) {
+//            head = null;
+//            tail = null;
+//        }
+        if (head == null || head == tail) {
+            return;
+        }
+
+//        two element exist
+        if (head.next == tail) {
+           Node temp = head;
+            head = tail;
+            tail = temp;
+            head.next = tail;
+            tail.prev = head;
+            head.prev = null;
+            tail.next = null;
+            return;
+        }
+        Node first = head;
+        Node last = tail;
+
+//        Update reference
+        head = last;
+        tail = first;
+
+        if (first.next != last) {
+           Node firstNext = first.next;
+           Node lastPrev = last.prev;
+
+//            Reconnect and previous Node
+            firstNext.prev = last;
+            lastPrev.next = first;
+
+//            Swap the next pointer
+            head.next = firstNext;
+            tail.next = null;
+
+//            Swap the pre pointer
+            tail.prev = lastPrev;
+            head.prev = null;
+        }else {
+//            if first and last are adjacent
+          Node firstNext = first.next;
+            head.next = first;
+            tail.next = null;
+
+            tail.prev = last;
+            head.prev = null;
+
+            head.next.prev = head;
+        }
+    }
 
 //    Printing a List
     public void printList() {
