@@ -56,6 +56,8 @@ public List<Integer> getHeap() {
     int maxValue = heap.get(0);
     heap.set(0,heap.remove(heap.size() - 1));
 
+    return remove();
+
 
     }
 

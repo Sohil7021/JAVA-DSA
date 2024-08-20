@@ -7,12 +7,15 @@ public class main {
         myBST.insert(21);
         myBST.insert(76);
         myBST.insert(18);
+        myBST.insert(27);
         myBST.insert(52);
         myBST.insert(82);
 
-        myBST.insert(27);
+//        myBST.insert(27);
 
-        System.out.println( myBST.contains(18));
+//        System.out.println( myBST.contains(18));
+//        System.out.println(myBST.rContains(27));
+        System.out.println(myBST.minValue(myBST.root));
 
 //        System.out.println("root = " + myBST.root);
 //        System.out.println(myBST.root.left.value);
