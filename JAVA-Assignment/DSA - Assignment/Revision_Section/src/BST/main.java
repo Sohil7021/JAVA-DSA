@@ -15,12 +15,14 @@ public class main {
 
 //        System.out.println( myBST.contains(18));
 //        System.out.println(myBST.rContains(27));
-        System.out.println(myBST.minValue(myBST.root));
+//        System.out.println(myBST.minValue(myBST.root));
 
 //        System.out.println("root = " + myBST.root);
 //        System.out.println(myBST.root.left.value);
 //        System.out.println(myBST.root.right.value);
 //        System.out.println(myBST.root.left.right.value);
+
+        System.out.println(myBST.BFS());
 
     }
 }
