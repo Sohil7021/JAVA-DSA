@@ -2,7 +2,7 @@ package Interview_Master_100;
 
 public class Single_Number {
     public static void main(String[] args) {
-        int[] nums = {4,2,1,2,1};
+        int[] nums = {4,1,2,1,2};
         int ans = singleNumber(nums);
         System.out.println(ans);
 

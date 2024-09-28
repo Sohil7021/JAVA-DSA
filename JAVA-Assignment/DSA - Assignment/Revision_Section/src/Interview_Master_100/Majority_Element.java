@@ -2,7 +2,7 @@ package Interview_Master_100;
 
 public class Majority_Element {
     public static void main(String[] args) {
-        int[] nums = {3,3,2};
+        int[] nums = {3,2,3};
         int ans = majorityElement(nums);
         System.out.println(ans);
 
