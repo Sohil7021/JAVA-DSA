@@ -2,7 +2,7 @@ package AlgoMap.io;
 
 public class Find_Closest_NUmber {
     public static void main(String[] args) {
-        int[] nums = {-4,-2,1,4,5};
+        int[] nums = {-4,-2,1,4,8};
         int ans = closest_Zero(nums);
         System.out.println(ans);
     }
@@ -12,7 +12,8 @@ public class Find_Closest_NUmber {
         }
         int closest = nums[0];
         for (int n : nums) {
-            if (Math.abs(n) < Math.abs(closest) || Math.abs(n) == Math.abs(closest) || Math.abs(n) < closest) {
+            if (Math.abs(n) < Math.abs(closest) ||
+                    (Math.abs(n) == Math.abs(closest) && n > closest)) {
                 closest = n;
             }
 
